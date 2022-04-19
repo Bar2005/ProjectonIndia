@@ -60,8 +60,8 @@ int leftMotorPwmPin = 3;
 int leftMotorDirPin = 4;
 int trigPin;
 int echoPin;
-bool dir = 1;
-bool drive = 1;
+bool dir = true;
+bool drive = true;
 long duration; // variable for the duration of sound wave travel
 int distance;  // variable for the distance measurement
 int motorSrtaightSpeed = 160;
@@ -97,7 +97,7 @@ void loop() {
     dir = !dir;    // switch direcction so that the next time it will turn the opposite side
     } 
     if (!RemoteXY.switch_1){
-      drive = 0;
+      drive = false;
     }                     // in case we switch to off on our phone, it will turn off the car due to the condion in the while loop
   }
 }
